@@ -1,0 +1,122 @@
+.Service_Wrapper {
+  background-color: #fff;
+
+  .TechStacks_Inner_Wrapper{
+    padding: 0 !important;
+    padding-right: 50px !important;
+    padding-left: 50px !important;
+
+    .Tech_Content{
+        padding: 0px !important;
+        padding-top: 30px !important;
+    }
+  }
+  .Service_Inner_Wrapper {
+    padding: 50px;
+    margin-top: 10px;
+    background-color: #fff;
+    text-align: left;
+    margin-top: 100px;
+
+    @media screen and (max-width:1400px){
+        padding: 0;
+    }
+
+    .Header {
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .Services_Content {
+      padding: 50px;
+      //    margin-top: 20px;
+      color: #fff;
+      .Services_home {
+        margin-top: 30px;
+        //  text-align: center;
+      }
+      .card {
+        border: 0px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 4px -1px;
+        margin-bottom: 30px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.03);
+          transition: all 0.25s;
+          // outline: 2px solid #000022;
+        }
+      }
+      .card-body {
+        padding: 0px;
+        height: 200px;
+        img {
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+        }
+      }
+      .card-footer {
+        text-align: left;
+        background-color: #fff;
+        //  margin-top: 10px;
+        border: 0px;
+        //  position: absolute;
+        border-radius: 0 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        flex-direction: column;
+        height: 230px;
+
+        @media screen and (max-width:1200px){
+            height: 260px;
+        }
+
+        @media screen and (max-width:992px){
+            height: 180px;
+        }
+
+        @media screen and (max-width:767px){
+            height: fit-content;
+        }
+        //  margin-left: 10px;
+
+        //  min-height: 270px;
+        //  max-height: 340px;
+        h4 {
+          margin-bottom: 10px;
+          font-weight: 700;
+          font-size: 20px;
+          font-family: "Nunito", sans-serif;
+          text-align: center;
+        }
+        p {
+          font-weight: 400;
+          color: black;
+          text-align: center;
+        }
+
+      }
+      .Explore_button {
+        border: 0px;
+        // display: contents;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #000022;
+        color: #fff;
+        border: 1px solid #fff;
+        width: 150px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #fff;
+          border: 1px solid #000022;
+          color: #000022;
+        }
+      }
+    }
+  }
+}

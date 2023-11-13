@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> 
+   <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/Logo_header.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="5Y Technologies Decoders"
+      content=""
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/Logo_header.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r61/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/40480/OBJLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,11 +31,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>5Y Tech</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <noscript></noscript>
+    <div id="root">
+    </div>
+    <div class="particlehead" style="top: 0;left: 0;z-index: 1;width: 100%;height: 90%;display: flex;justify-content: center;align-items: center;"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,4 +49,141 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    var site = site || {};
+site.window = $(window);
+site.document = $(document);
+site.Width = site.document.width();
+site.Height = site.document.height()-100;
+// console.log(site.)
+if(site.Width < 992 && site.Width > 450){
+  site.Height=600
+  console.log(site.Width,"lil1i")
+}
+
+if(site.Width < 450){
+  site.Height=650
+  // site.Width=300
+  console.log(site.Width,"lil1i")
+}
+if(window.location.href.split("/").includes("aboutus") || window.location.href.split("/").includes("services") || window.location.href.split("/").includes("contactus")){
+   // console.log(window.location.href.split("/"))
+   site.Height = 0;
+}
+
+
+var Background = function() {
+
+};
+
+Background.headparticle = function() {   
+
+  //  if ( !Modernizr.webgl ) {
+      // alert('Your browser dosent support WebGL');
+  //  }
+
+   var camera, scene, renderer;
+   var mouseX = 0, mouseY = 0;
+   var p;
+
+   var windowHalfX = site.Width / 2;
+   var windowHalfY = site.Height / 2;
+
+   Background.camera = new THREE.PerspectiveCamera( 35, site.Width / site.Height, 1, 2000 );
+   Background.camera.position.z = 300;
+
+   // scene
+   Background.scene = new THREE.Scene();
+
+   // texture
+   var manager = new THREE.LoadingManager();
+   manager.onProgress = function ( item, loaded, total ) {
+      //console.log('webgl, twice??');
+      //console.log( item, loaded, total );
+   };
+
+
+   // particles
+   var p_geom = new THREE.Geometry();
+   var p_material = new THREE.ParticleBasicMaterial({
+      // color: 0X4B4B4B,
+      color:0XFFFFFF,
+      size: 1.5
+   });
+
+   // model
+   var loader = new THREE.OBJLoader( manager );
+   loader.load( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/40480/head.obj', function ( object ) {
+
+      object.traverse( function ( child ) {
+
+         if ( child instanceof THREE.Mesh ) {
+
+            // child.material.map = texture;
+
+            var scale = 8;
+
+            $(child.geometry.vertices).each(function() {
+               p_geom.vertices.push(new THREE.Vector3(this.x * scale, this.y * scale, this.z * scale));
+            })
+         }
+      });
+
+      Background.scene.add(p)
+   });
+
+   p = new THREE.ParticleSystem(
+      p_geom,
+      p_material
+   );
+
+   Background.renderer = new THREE.WebGLRenderer({ alpha: true });
+   Background.renderer.setSize( site.Width, site.Height );
+   Background.renderer.setClearColor(0x000000, 0);
+
+   $('.particlehead').append(Background.renderer.domElement);
+   $('.particlehead').on('mousemove', onDocumentMouseMove);
+   site.window.on('resize', onWindowResize);
+
+   function onWindowResize() {
+      windowHalfX = site.Width / 2;
+      windowHalfY = site.Height / 2;
+      //console.log(windowHalfX);
+
+      Background.camera.aspect = site.Width / site.Height;
+      Background.camera.updateProjectionMatrix();
+
+      Background.renderer.setSize( site.Width, site.Height );
+   }
+
+   function onDocumentMouseMove( event ) {
+      mouseX = ( event.clientX - windowHalfX ) / 2;
+      mouseY = ( event.clientY - windowHalfY ) / 2;
+   }
+
+   Background.animate = function() { 
+
+      Background.ticker = TweenMax.ticker;
+      Background.ticker.addEventListener("tick", Background.animate);
+
+      render();
+   }
+
+   function render() {
+      Background.camera.position.x += ( (mouseX * .5) - Background.camera.position.x ) * .05;
+      Background.camera.position.y += ( -(mouseY * .5) - Background.camera.position.y ) * .05;
+
+      Background.camera.lookAt( Background.scene.position );
+
+      Background.renderer.render( Background.scene, Background.camera );
+   }
+
+   render();
+
+   Background.animate();
+};
+
+
+Background.headparticle();
+  </script>
 </html>

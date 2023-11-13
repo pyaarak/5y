@@ -1,0 +1,209 @@
+.Contactus_Wrapper {
+  font-family: "Nunito", sans-serif;
+  // background-image: url(../Assets/contact_us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // padding: 50px;
+
+  .img_card{
+    padding: 50px;
+    background-color: #000022;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 50px;
+    .div_card{
+       padding: 10px;
+       box-shadow: 0 0 4px -1px;
+       margin-bottom: 20px;
+       border-radius: 10px;
+       width: 250px;
+       color: #fff;
+
+       .count{
+         font-size: 30px;
+         font-weight: 700;
+       }
+       .countName{
+         color: #fff;
+       }
+    }  
+  }
+
+  .Contact_bg {
+    background-image: url(../Assets/contact_us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    padding-top: 200px;
+
+    @media screen and (max-width:992px){
+        height: 400px;
+    }
+  
+    @media screen and (max-width:767px){
+        height: 350px;
+    }
+  }
+
+  .margintopcontent {
+    padding: 50px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -90px;
+    background-color: #fff;
+    box-shadow: 0 0 4px -1px;
+    // border: 1px solid #ddd;
+    // z-index: 5;
+
+    @media screen and (max-width:500px){
+        width: 90%;
+        margin-left: 5%;
+    }
+  }
+
+  .Contactus_Inner_Wrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    // padding: 100px;
+
+    // Contact_Banner_Conten
+
+    // .drone_img{
+    //     position: absolute;
+    //     margin-top: -10%;
+    //     left: 40px;
+    //     opacity: 0.2;
+    // }
+
+    .Contact_Banner_Content {
+      width: 90%;
+      padding: 20px;
+      background-color: #fff;
+      //    margin-top: 20px;
+      .contact_card {
+        //  width: 100%;
+        //  padding: 30px;
+        position: relative;
+        //  background-color: #000022;
+      }
+      .Contact_us_Second_Card {
+        //  background-color: #000022;
+        //  padding: 30px;
+        //  width: 100%;
+        //  height: 100%;
+        display: flex;
+        img {
+          width: 60%;
+        }
+      }
+      .Contact_Banner_home {
+        //  margin-top: 50px;
+
+        .but {
+          text-align: left;
+          margin-left: 10px;
+        }
+
+        .Form {
+          text-align: left;
+          padding: 50px;
+          background-color: #fff;
+          @media screen and (max-width:600px){
+            padding: 10px;
+          }
+          .Header {
+            margin-bottom: 15px;
+          }
+          input {
+            width: 100%;
+            margin-left: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #8e8888;
+            margin-bottom: 20px;
+          }
+          textarea {
+            width: 100%;
+            margin-left: 10px;
+            padding: 10px;
+            height: 170px;
+            margin-top: 10px;
+            border: 1px solid #8e8888;
+            border-radius: 5px;
+          }
+        }
+        //  text-align: center;
+      }
+      .card {
+        border: 0px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0);
+        //  box-shadow: 0 0 4px -1px;
+        margin-bottom: 30px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.03);
+          transition: all 0.25s;
+          // outline: 2px solid #000022;
+        }
+      }
+      .card-body {
+        padding: 0px;
+        height: 80px;
+        width: auto;
+        img {
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+          width: auto;
+        }
+      }
+      .card-footer {
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0);
+        margin-top: 10px;
+        border: 0px;
+        // min-height: 270px;
+        .name_content {
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: 700;
+          color: #8e8888;
+        }
+        h4 {
+          margin-bottom: 10px;
+          font-weight: 700;
+          font-family: "Oswald", sans-serif;
+        }
+        p {
+          font-weight: 400;
+        }
+      }
+      .Submit_button {
+        border: 0px;
+        // display: contents;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #000022;
+        color: #fff;
+        width: 150px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #fff;
+          border: 1px solid #000022;
+          color: #000022;
+        }
+      }
+    }
+  }
+}

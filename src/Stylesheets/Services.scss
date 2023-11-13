@@ -1,0 +1,144 @@
+.Services_Wrapper {
+  // font-family: 'Oswald', sans-serif;
+  font-family: "Nunito", sans-serif;
+  background-color: #000022;
+  .Services_Inner_Wrapper {
+    margin-top: 50px;
+
+    .Services_Content {
+      padding: 50px;
+      //    margin-top: 20px;
+      color: #fff;
+      .Services_home {
+        margin-top: 30px;
+        //  text-align: center;
+      }
+      .card {
+        border: 0px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 4px -1px;
+        margin-bottom: 30px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.03);
+          transition: all 0.25s;
+          // outline: 2px solid #000022;
+        }
+      }
+      .card-body {
+        padding: 0px;
+        height: 230px;
+        img {
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+        }
+      }
+      .card-footer {
+        text-align: left;
+        background-color: #fff;
+        margin-top: 10px;
+        border: 0px;
+        min-height: 270px;
+        height: 280px;
+        h4 {
+          margin-bottom: 10px;
+          font-weight: 700;
+          font-family: "Oswald", sans-serif;
+        }
+        p {
+          font-weight: 400;
+        }
+
+        @media screen and (max-width:1400px){
+            height: 400px;
+        }
+
+        @media screen and (max-width:1200px){
+            height: 450px;
+        }
+
+        @media screen and (max-width:992px){
+            height: 270px;
+        }
+
+        @media screen and (max-width:767px){
+            height: fit-content;
+            min-height: auto;
+        }
+      }
+      .Explore_button {
+        border: 0px;
+        // display: contents;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #000022;
+        color: #fff;
+        border: 1px solid #fff;
+        width: 150px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #fff;
+          border: 1px solid #000022;
+          color: #000022;
+        }
+      }
+    }
+  }
+}
+.Third_Wrapper {
+  margin-top: 70px;
+}
+.img_card {
+  .div_card_inner {
+    box-shadow: 0 0 4px -1px;
+    margin-bottom: 20px;
+    border-radius: 50px 0 0px 0%;
+    width: auto;
+    padding: 20px;
+    text-align: left;
+    // border-left: 10px solid #000022;
+    // border-right: 10px solid #000022;
+    background: linear-gradient(180deg, rgba(36,33,0,0) 90%, #000022 100%, #000022 0%);
+    
+    .round{
+        padding: 10px;
+        box-shadow: 0 0 4px -1px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        background-color: #fff;
+
+        svg{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .count {
+      font-size: 30px;
+      font-weight: 700;
+    //   color: #fff;
+      margin: 0px;
+      padding: 0px;
+    }
+    .countName {
+        font-weight: 700;
+        padding: 0;
+        // margin: 0;
+        // padding: 10px;
+        // background-color: #fff;
+        // box-shadow: 0 0 2px 1px;
+    //   color: #fff;
+    }
+  }
+  .div_card {
+    padding: 50px;
+  }
+}

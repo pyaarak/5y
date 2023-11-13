@@ -1,0 +1,56 @@
+.Footer_Wrapper{
+    background-color: #0F0C1D;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    @media screen and (max-width:767px){
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    font-family: 'Oswald', sans-serif;
+    .Footer_Inner_Wrapper{
+        .Footer_Policy{
+            border-top: 2px solid #8e8888;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 0;
+            margin-top: 20px;
+            color: #8e8888;
+        }
+      .Footer_Address{
+        text-align: left;
+        @media screen and (max-width:767px){
+            text-align: center;
+        }
+        &.card2{
+            padding-left: 50px;
+
+            @media screen and (max-width:767px){
+                // text-align: center;
+            padding-left: 0px;
+            }
+        }
+        .Header{
+            margin-top: 40px;
+        }
+        img{
+            width: 200px;
+            text-align: left;
+        }
+        p{
+            text-align: left;
+            color: #A49EAF;
+
+            @media screen and (max-width:767px){
+                text-align: center;
+            }
+
+            svg{
+                margin-right: 10px;
+            }
+        }
+      }
+    }
+}

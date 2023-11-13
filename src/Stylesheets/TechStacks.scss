@@ -1,0 +1,115 @@
+.TechStacks_Wrapper{
+    // background-color: #fff;
+    text-align: left;
+    margin-top: -40px;
+    .Header {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+    .TechStacks_Inner_Wrapper{
+        margin-top: 10px;
+        padding: 50px;
+        padding-left: 150px;
+        padding-right: 150px;
+
+        .drone_img{
+            // position: absolute;
+            // margin-top: -10%;
+            // left: 40px;
+            opacity: 0.9;
+        }
+
+        .div_img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .div_content{
+            // background-color: #882141;
+            border-radius: 10px;
+            // padding: 50px;
+            margin-top: -90px;
+            color: #fff;
+            width: 60%;
+            font-weight: 700;
+            // box-shadow: 0 0 10px 11px #fff;
+            // transform: rotate(-20deg);
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #8e8888;
+        }
+
+        .Tech_Content{
+           padding: 50px;
+        //    margin-top: 20px;
+           .Technologies_home{
+             margin-top: 50px;
+            //  text-align: center;
+           }
+           .card{
+             border: 0px;
+             border-radius: 5px;
+             background-color: rgba(0, 0, 0, 0);
+            //  box-shadow: 0 0 4px -1px;
+             margin-bottom: 30px;
+             cursor: pointer;
+
+             &:hover{
+                transform: scale(1.03);
+                transition: all .25s;
+                // outline: 2px solid #000022;
+             }
+           }
+           .card-body{
+            padding: 0px;
+            height: 80px;
+            width: auto;
+            text-align: center;
+            img{
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                width: auto;
+            }
+           }
+           .card-footer{
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0);
+            margin-top: 10px;
+            border: 0px;
+            // min-height: 270px;
+            .name_content{
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 700;
+                color: #8e8888;
+            }
+            h4{
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-family: 'Oswald', sans-serif;
+            }
+            p{
+                font-weight: 400;
+            }
+           }
+           .Explore_button{
+            border: 0px;
+            // display: contents;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #000022;
+            color: #fff;
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                background-color: #fff;
+                border: 1px solid #000022;
+                color: #000022;
+            }
+           }
+        }
+    }
+}

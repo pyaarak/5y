@@ -1,0 +1,113 @@
+.Second_Banner_Wrapper {
+  padding: 20px;
+  // padding-right: 10px;
+  // padding-left: 100px;
+
+
+  @media screen and (max-width: 1400px) {
+    padding-right: 40px;
+  }
+  .Second_Inner_Wrapper {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 150px;
+    padding: 50px;
+    border-radius: 0px;
+    // box-shadow: 0 0 4px 1px;
+    text-align: left;
+
+    @media screen and (max-width: 767px) {
+      padding: 0px;
+    }
+
+    @media screen and (max-width:1200px){
+        margin-top: 20px;
+        // margin-left: -90px;
+    }
+
+    @media screen and (max-width:767px){
+        margin-top: 20px;
+        // margin-left: 0px;
+    }
+
+    .second_part {
+        @media screen and (max-width:1200px){
+            margin-top: 20px;
+            // margin-left: -90px;
+        } 
+      .content {
+        margin-top: 80px;
+        margin-left: -150px;
+
+        @media screen and (max-width:1200px){
+            margin-top: 20px;
+            margin-left: -90px;
+        }
+
+        @media screen and (max-width:767px){
+            margin-top: 20px;
+            margin-left: 0px;
+        }
+      }
+    }
+
+    .About_us {
+      img {
+        width: 70%;
+        margin-left: 25%;
+      }
+      .first_img {
+        margin-top: -130px;
+        z-index: 3;
+        // position: absolute;
+        // width: ;
+        @media screen and (max-width:1200px){
+            margin-top: 0px;
+            // margin-left: -90px;
+        }
+      }
+      .second_img {
+        margin-top: -130px;
+        width: 70%;
+        z-index: 1;
+        margin-left: 0px;
+
+        @media screen and (max-width:1200px){
+            margin-top: 10px;
+            // margin-left: -90px;
+        }
+      }
+    }
+
+    .Header {
+      color: #000022;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    p {
+      // font-family: 'Oswald', sans-serif;
+      font-family: "Nunito", sans-serif;
+      text-align: left;
+      margin-top: 20px;
+      text-align: justify;
+    }
+
+    button {
+      border: 0px;
+      // display: contents;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #000022;
+      color: #fff;
+      width: 150px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid #000022;
+        color: #000022;
+      }
+    }
+  }
+}
