@@ -1,3 +1,66 @@
+.Banner_Inner_Wrapper {
+  &.active{
+    margin-top: 90px;
+
+    .image_Wrapper{
+      @media screen and (max-width:767px){
+        height: max-content;
+      }
+
+      @media screen and (max-width:400px){
+        height: 600px;
+      }
+    }
+  }
+}
+
+.right_side_Image{
+  height: 500px;
+  // width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width:1300px){
+    height: 400px;
+  }
+
+  @media screen and (max-width:400px){
+      height: 300px;
+  }
+//     background-image: url(../assets/g1.png);
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     height: 570px;
+//     margin-top: 200px;
+}
+
+.Banner_content{
+  &.active{
+    margin-top: -100px;
+
+    @media screen and (max-width:600px){
+      margin-top: 0px;
+      padding: 10px;
+    }
+    .Header {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: left;
+      // font-family: "Nunito", sans-serif;
+    }
+    p{
+      font-size: 16px;
+      font-family: "Nunito", sans-serif;
+
+      @media screen and (max-width:400px){
+        text-align: justify;
+      }
+    }
+  }
+}
+
 .Service_Wrapper {
   background-color: #fff;
 

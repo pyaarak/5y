@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import img_w from '../Assets/whatsapp.png';
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 
 export default function FixedFooter() {
@@ -15,7 +16,9 @@ export default function FixedFooter() {
   return (
     <div
       className="Fixed"
-      style={{ position: "fixed", bottom: "15px", padding: "10px" }}
+      style={{ position: "fixed", bottom: "15px", padding: "10px",width:"100%",display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center", }}
     >
       {View && (
         <div
@@ -39,6 +42,7 @@ export default function FixedFooter() {
           ></ArrowCircleUpIcon>
         </div>
       )}
+      <div onClick={e=>{window.open("https://wa.me/6369070815")}}><img src={img_w} width={40} height={40}></img></div>
     </div>
   );
 }

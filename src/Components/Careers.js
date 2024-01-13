@@ -1,6 +1,10 @@
 import React from "react";
 import "../Stylesheets/Careers.scss";
 import img from "../Assets/Contus.jpg";
+import Clients from "./Clients";
+import ClientRate from "./ClientRate";
+import Webapptested from "./Webapptested";
+import MobileApptest from "./MobileApptest";
 
 export default function Careers() {
   return (
@@ -41,19 +45,23 @@ export default function Careers() {
               {/* <img src={img} width={"100%"}></img> */}
               <h1 style={{ textAlign: "left" }}>Global Impact</h1>
               <div className="div_card">
-                <p className="count">200+</p>
+                {/* <p className="count">200+</p> */}
+                <Clients></Clients>
                 <p className="countName">Clients</p>
               </div>
               <div className="div_card">
-                <p className="count">90%</p>
+                {/* <p className="count">90%</p> */}
+                <ClientRate></ClientRate>
                 <p className="countName">Client Rate us</p>
               </div>
               <div className="div_card">
-                <p className="count">100+</p>
+                {/* <p className="count">100+</p> */}
+                <Webapptested></Webapptested>
                 <p className="countName">Web Apps Tested</p>
               </div>
               <div className="div_card">
-                <p className="count">50+</p>
+                {/* <p className="count">50+</p> */}
+                <MobileApptest></MobileApptest>
                 <p className="countName">Mobile App Tested</p>
               </div>
             </div>

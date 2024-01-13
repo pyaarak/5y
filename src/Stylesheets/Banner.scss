@@ -318,6 +318,23 @@
       // display: none;
     }
 
+    .sub{
+      animation: viewpoint1 1s;
+
+      @keyframes viewpoint1 {
+        from{
+           opacity: 0;
+           margin-left: -100px;
+           margin-right: 100px;
+        }
+        to{
+          opacity: 1;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+    }
+
     .header {
         color: #fff;
         // font-family: 'Nunito', sans-serif;
@@ -330,6 +347,7 @@
         // font-family: "Poppins", sans-serif;
         font-family: 'Oswald', sans-serif;
         z-index: 1;
+        animation: viewpoint 1s;
         // white-space: nowrap;
         // text-transform: uppercase;
         // background: -webkit-linear-gradient(#102948, #6f4e4d);
@@ -341,7 +359,18 @@
 
         // animation: 
         // typing 5s steps(101, end);
-
+          @keyframes viewpoint {
+            from{
+               opacity: 0;
+               margin-left: -100px;
+               margin-right: 100px;
+            }
+            to{
+              opacity: 1;
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+          }
         // @keyframes typing {
         //   from { width: 30% }
         //   to { width: 100% }

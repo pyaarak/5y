@@ -56,7 +56,7 @@ function App() {
       </Router>
 
       <Footer></Footer>
-      <FixedFooter></FixedFooter>
+      {/* <FixedFooter></FixedFooter> */}
     </div>
   );
 }

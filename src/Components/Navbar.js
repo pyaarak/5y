@@ -24,6 +24,7 @@ export default function Navbar() {
   useEffect(()=>{
     handleChange()
   },[])
+  
   window.addEventListener("scroll", handleChange);
   window.addEventListener("resize", handleChange);
   return (
@@ -34,6 +35,7 @@ export default function Navbar() {
         </div>
         {!MobileActive && (
           <div className="Menu">
+            <span onClick={e=>{window.location.href="/"}}>Home</span>
             <span onClick={e=>{window.location.href="/aboutus"}}>About us</span>
             <span onClick={e=>{window.location.href="/services"}}>Services</span>
             <span>Case Study</span>
@@ -46,6 +48,7 @@ export default function Navbar() {
           <div className="MobileActive" onClick={e=>{setMobileshow(false)}}>
             <div className="Menu active">
             <p onClick={e=>{setMobileshow(false)}}><CloseIcon></CloseIcon></p>
+            <p onClick={e=>{window.location.href="/";e.stopPropagation()}}>Home</p>
             <p onClick={e=>{window.location.href="/aboutus";e.stopPropagation()}}>About us</p>
             <p onClick={e=>{window.location.href="/services";e.stopPropagation()}}>Services</p>
             <p>Case Study</p>
